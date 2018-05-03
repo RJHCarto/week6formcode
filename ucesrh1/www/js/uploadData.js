@@ -1,11 +1,15 @@
 function startDataUpload() {
 	alert ("start data upload");
 
-	var name = document.getElementById("name").value;
-	var surname = document.getElementById("surname").value;
-	var module = document.getElementById("module").value;
-	alert(name + " "+ surname + " "+module);
-	var postString = "name="+name +"&surname="+surname+"&module="+module;
+	var Question = document.getElementById("Question").value;
+	var AnswerOne = document.getElementById("AnswerOne").value;
+	var AnswerTwo = document.getElementById("AnswerTwo").value;
+	var AnswerThree = document.getElementById("AnswerThree").value;
+	var AnswerFour = document.getElementById("AnswerFour").value;
+	var postString = "Question="+Question+"&AnswerOne="+AnswerOne+"&AnswerTwo="+AnswerTwo+"&AnswerThree="+AnswerThree+"&AnswerFour="+AnswerFour;
+	var latitude = document.getElementById("latitude").value;
+	var longitude = document.getElementById("longitude").value;
+	postString = postString + "&latitude=" + latitude + "&longitude=" + longitude;
 	processData(postString);
 
 }
