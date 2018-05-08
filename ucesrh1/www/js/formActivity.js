@@ -1,5 +1,5 @@
 // load the map
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+var mymap = L.map('mapid').setView([51.524428, -0.134224], 17);
 				// load the tiles
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 			maxZoom: 18,
@@ -10,9 +10,10 @@ var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 			id: 'mapbox.streets'
 		}).addTo(mymap);
 
-var marker = L.marker([51.5, -0.09], {
+var marker = L.marker([51.524428, -0.134224], {
     draggable:true
 });
+
 marker.addTo(mymap);
 
 marker.on('dragend', function (e) {

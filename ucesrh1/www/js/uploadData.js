@@ -1,15 +1,15 @@
 function startDataUpload() {
 	alert ("start data upload");
-
 	var Question = document.getElementById("Question").value;
 	var AnswerOne = document.getElementById("AnswerOne").value;
 	var AnswerTwo = document.getElementById("AnswerTwo").value;
 	var AnswerThree = document.getElementById("AnswerThree").value;
 	var AnswerFour = document.getElementById("AnswerFour").value;
-	var postString = "Question="+Question+"&AnswerOne="+AnswerOne+"&AnswerTwo="+AnswerTwo+"&AnswerThree="+AnswerThree+"&AnswerFour="+AnswerFour;
-	var latitude = document.getElementById("latitude").value;
+	var Correct = document.getElementById("Correct").value;
 	var longitude = document.getElementById("longitude").value;
-	postString = postString + "&latitude=" + latitude + "&longitude=" + longitude;
+	var latitude = document.getElementById("latitude").value;
+	alert(Question + " "+ AnswerOne + " \n"+ AnswerTwo + " " + AnswerThree + " " + AnswerFour + " " + Correct +" " + " \n" + longitude + " " + latitude);
+	var postString = "Question="+Question+"&AnswerOne="+AnswerOne+"&AnswerTwo="+AnswerTwo+"&AnswerThree="+AnswerThree+"&AnswerFour="+AnswerFour+"&Correct="+ Correct +"&latitude=" + latitude + "&longitude=" + longitude;
 	processData(postString);
 
 }
@@ -17,11 +17,11 @@ function startDataUpload() {
 
 var client;
 function processData(postString) {
-client = new XMLHttpRequest();
-client.open('POST','http://developer.cege.ucl.ac.uk:30290/uploadData',true);
-client.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-client.onreadystatechange = dataUploaded;
-client.send(postString);
+	client = new XMLHttpRequest();
+	client.open('POST','http://developer.cege.ucl.ac.uk:30290/uploadData',true);
+	client.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	client.onreadystatechange = dataUploaded;
+	client.send(postString);
 }
 
 // create the code to wait for the response from the data server, and process the response once it is received

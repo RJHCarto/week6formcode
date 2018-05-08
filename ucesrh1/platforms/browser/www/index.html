@@ -17,8 +17,9 @@
 </head>
 <body>
 <main>
-<div id="mapid" style="width: 600px; height: 400px;"></div>
-<h1> This is a simple form</h1>
+<h1> Question Creator </h1>
+<div id="mapid" style="width: 100%; height: 400px;"></div>
+<p> Drag the point to your proposed question location </p>
 <div>
 <label for="Question"> Question: </label><input type="text" size="25" id="Question"/><br />
 <label for="AnswerOne"> Answer One: </label><input type="text" size="25" id="AnswerOne"/><br />
@@ -27,8 +28,17 @@
 <label for="AnswerFour"> Answer Four: </label><input type="text" size="25" id="AnswerFour"/><br />
 <label for="longitude">Longitude: </label><input type="text" size="25" id="longitude"/><br />
 <label for="latitude">Latitude: </label><input type="text" size="25" id="latitude"/><br/>
-<br />
-<button id="startUpload" onclick="startDataUpload()">Start Data Upload</button>
+<p>Which is the correct answer?</p>
+<select name="Correct" id="Correct">
+<option>one</option>
+<option>two</option>
+<option>three</option>
+<option>four</option>
+</select>
+<br/>
+<br/>
+<button id="startUpload" onclick="startDataUpload()">Question Upload</button>
+<br/>
 <div id="dataUploadResult">The result of the upload goes here</div>
 </main>
 <script src="./js/uploadData.js"> </script>
